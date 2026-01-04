@@ -1,0 +1,107 @@
+/* Standard CSS - Optimized for compatibility with Tailwind Play CDN */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0a0a0c;
+    color: #d1d5db;
+}
+
+.section-title {
+    font-size: 1.875rem; /* 3xl */
+    line-height: 2.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.section-title::after {
+    content: '';
+    height: 1px;
+    background-color: #1e293b; /* slate-800 */
+    flex-grow: 1;
+}
+
+/* GSAP reveal Initial state */
+.gsap-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Navbar scroll state */
+.nav-scrolled {
+    background-color: rgba(10, 10, 12, 0.9);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+    height: 4rem; /* h-16 */
+}
+
+.nav-scrolled > div {
+    height: 4rem;
+}
+
+/* Hover animations */
+.nav-link {
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #3b82f6; /* blue-500 */
+    transition: all 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Button Enhancements */
+.btn-primary {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #2563eb; /* blue-600 */
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.btn-primary:hover {
+    background-color: #3b82f6; /* blue-500 */
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+    transform: translateY(-2px);
+}
+
+.btn-primary:active {
+    transform: scale(0.98);
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #1e1e22; /* dark-800 */
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.btn-secondary:hover {
+    background-color: #2e2e34; /* dark-700 */
+    border-color: rgba(59, 130, 246, 0.5);
+    transform: translateY(-2px);
+}
+
+.btn-secondary:active {
+    transform: scale(0.98);
+}
